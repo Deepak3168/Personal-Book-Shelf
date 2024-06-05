@@ -1,0 +1,18 @@
+.maindiv{
+  margin:30px;
+}
+.contdiv{
+  display: flex;
+  padding:1rem;
+  justify-content: end;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+}
+.green{
+  color: red;
+}
