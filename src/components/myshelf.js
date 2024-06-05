@@ -30,7 +30,7 @@ function Favorites() {
       <div className='contdiv m-2' >
             <Button variant="success" onClick={handleLibrary}>Library</Button>
         </div>
-      <Row xs={2} md={4} className="g-4">
+      <Row xs='auto' md={4} className="g-4">
         {favorites.map((book, idx) => (
           <Col key={idx}>
             <BookCard

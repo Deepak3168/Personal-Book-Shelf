@@ -1,7 +1,6 @@
 
 import MainContainer from './components/container';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { useState,useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Favorites from './components/myshelf';
 
 function App() {

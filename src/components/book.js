@@ -6,7 +6,7 @@ const BookCard = ({ bookName, author, cover, year, ClickFunction, message,button
   const [clicked,setClicked] = useState(false)
   const handleAdd = () => {
     const favoriteBook = { bookName, author, cover, year };
-    if (buttonname=="Add to shelf"){
+    if (buttonname==="Add to shelf"){
       setClicked(true)
     }
     ClickFunction(favoriteBook);

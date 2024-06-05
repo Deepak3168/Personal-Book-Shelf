@@ -48,6 +48,7 @@ function MainContainer() {
                     setDocs(response.data.docs);
                 } catch (error) {
                     console.error("Error fetching data:", error);
+                    
                 } finally {
                     setLoading(false);
                 }
@@ -87,7 +88,7 @@ function MainContainer() {
                 {loading && <Spinner animation="border" role="status">
                 </Spinner>}
                 {message && <p>{message}</p>}
-                <Row xs={2} md={4} className="g-4">
+                <Row xs='auto' md={4} className="g-4">
                     {docs.map((doc, idx) => {
                     const isInShelf = favorites.some(fav => fav.bookName === doc.title);
                     const message = isInShelf ? "Already in the shelf" : "";
@@ -97,7 +98,7 @@ function MainContainer() {
                         bookName={doc.title}
                         buttonname="Add to shelf"
                         author={doc.author_name ? doc.author_name.join(', ') : 'Unknown'}
-                        cover={`https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg`} 
+                        cover={doc.cover_i ? `https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg` : back}
                         year={doc.first_publish_year}
                         ClickFunction={!isInShelf && addToFavorites}
                         message={message}
