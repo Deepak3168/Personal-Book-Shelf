@@ -27,6 +27,7 @@ function Favorites() {
 
   return (
     <Container fluid="md">
+        <h1 className='text-center mt-2'>My Shelf</h1>
       <div className='contdiv m-2' >
             <Button variant="success" onClick={handleLibrary}>Library</Button>
         </div>
